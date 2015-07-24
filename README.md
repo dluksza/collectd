@@ -104,6 +104,8 @@ collectd_global:
 collectd_plugins: "none"
 collectd_plugins_multi: "none"
 
+collectd_include_other_confs: false
+
 collectd_conf_rh: "/etc/collectd.conf"
 collectd_conf_deb: "/etc/collectd/collectd.conf"
 
