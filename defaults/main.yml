@@ -1,14 +1,14 @@
 ---
 # defaults file for collectd
 
-collectd_packages_RedHat:
- - { package: "collectd" }
- - { package: "collectd-apache" }
- - { package: "collectd-mysql" }
-
-collectd_packages_Debian:
- - { package: "collectd" }
- - { package: "collectd-utils" }
+collectd_packages:
+  Debian:
+    - collectd
+    - collectd-utils
+  RedHat:
+    - collectd
+    - collectd-apache
+    - collectd-mysql
 
 collectd_global:
  - { directive: "Hostname {{ ansible_fqdn }}" }
@@ -20,8 +20,6 @@ collectd_global:
 
 collectd_plugins: "none"
 collectd_plugins_multi: {}
-
-collectd_include_other_confs: false
 
 collectd_conf_rh: "/etc/collectd.conf"
 collectd_conf_deb: "/etc/collectd/collectd.conf"
