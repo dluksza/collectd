@@ -43,7 +43,7 @@ Include "{{ collectd_include_rh }}/*.include.conf"
 {% endif %}
 {% if ansible_os_family == "Debian" %}
 {% if collectd_include_other_confs %}
-Include "{{ collectd_include_rh }}/*.include.conf"
+Include "{{ collectd_include_deb }}/*.include.conf"
 {% else %}
 #Include "{{ collectd_include_deb }}/*.include.conf"
 {% endif %}
