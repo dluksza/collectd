@@ -11,7 +11,7 @@ collectd_packages:
     - collectd-mysql
 
 collectd_global:
- - { directive: "Hostname {{ ansible_fqdn }}" }
+ - { directive: "Hostname \"{{ ansible_fqdn }}\"" }
  - { directive: "FQDNLookup false" }
  - { directive: "Interval 10" }
  - { directive: "Timeout 2" }

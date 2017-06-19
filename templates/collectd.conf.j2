@@ -9,8 +9,8 @@
 ## Always load syslog plugin so we can investigate issues
 LoadPlugin syslog
 
-<Plugin "syslog">
-  LogLevel "info"
+<Plugin syslog>
+  LogLevel info
 </Plugin>
 
 {% if collectd_plugins is defined %}
@@ -27,7 +27,7 @@ LoadPlugin {{ element.plugin }}
 {% for key,value in collectd_plugins_multi.iteritems() %}
 LoadPlugin {{ key }}
 
-<Plugin "{{ key }}">
+<Plugin {{ key }}>
 {{ value }}
 </Plugin>
 
